@@ -1,7 +1,8 @@
 """
 https://machinelearningmastery.com/return-sequences-and-return-states-for-lstms-in-keras/
 
-Running the example returns a sequence of 3 values, one hidden state output for each input
+Running the example returns a sequence of 3 values,
+one hidden state output for each input
 """
 
 from keras.models import Model
@@ -16,6 +17,13 @@ model = Model(inputs=inputs1, outputs=lstm1)
 
 # define input data
 data = array([0.1, 0.2, 0.3]).reshape((1,3,1))
+print("data:", data, "\n", "data.shape:", data.shape)
 
 # make and show prediction
-print(model.predict(data))
+output = model.predict(data)
+print("output", output, "\n", "output.shape", output.shape)
+"""
+[[[-0.00189824]
+  [-0.00565225]
+  [-0.01119041]]]
+"""

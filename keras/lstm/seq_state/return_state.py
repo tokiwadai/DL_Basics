@@ -19,6 +19,15 @@ model = Model(inputs=inputs1, outputs=[lstm1, state_h, state_c])
 
 # define input data
 data = array([0.1, 0.2, 0.3]).reshape((1,3,1))
+print("data:", data, "\n", "data.shape:", data.shape)
 
 # make and show prediction
-print(model.predict(data))
+output = model.predict(data)
+print("output", output)
+"""
+output [
+    array([[-0.10934601]], dtype=float32), 
+    array([[-0.10934601]], dtype=float32), 
+    array([[-0.22264498]], dtype=float32)
+]
+"""

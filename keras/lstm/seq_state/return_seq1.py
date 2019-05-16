@@ -16,6 +16,11 @@ model = Model(inputs=inputs1, outputs=lstm1)
 
 # define input data
 data = array([0.1, 0.2, 0.3]).reshape((1,3,1))
+print("data:", data, "\n", "data.shape:", data.shape)
 
 # make and show prediction
-print(model.predict(data))
+output = model.predict(data)
+print("output", output, "\n", "output.shape", output.shape)
+"""
+[[-0.10513707]]
+"""
